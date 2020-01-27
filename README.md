@@ -1,4 +1,4 @@
-# GC_Lab_3.1
+# Lab 3.1 Student Information 
 ## Task
 Provide information about students in the class.
 

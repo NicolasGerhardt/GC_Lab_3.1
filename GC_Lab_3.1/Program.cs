@@ -23,17 +23,17 @@ namespace GC_Lab_3._1
                 createMenuwithArray(students);
                 int selection = promptUserforMenuChoice(students.Length);
 
-                Console.WriteLine("Do you want to know about their favorite food or previous title?");
+                Console.WriteLine($"Do you want to know about {students[selection]}'s favorite food or previous title?");
                 createMenuwithArray(foodOrTitle);
                 int foodOrTitleSelection = promptUserforMenuChoice(foodOrTitle.Length);
 
                 switch (foodOrTitleSelection)
                 {
                     case 0:
-                        Console.WriteLine($"{students[selection]} favorite food is {favoriteCandy[selection]}");
+                        Console.WriteLine($"{students[selection]}'s favorite food is {favoriteCandy[selection]}");
                         break;
                     case 1:
-                        Console.WriteLine($"{students[selection]} previous title was {previousTitle[selection]}");
+                        Console.WriteLine($"{students[selection]}'s previous title was {previousTitle[selection]}");
                         break;
                 }
             } while (askAboutAnotherStudent());
@@ -92,7 +92,7 @@ namespace GC_Lab_3._1
                 "Gray Stuff",
                 "Harp Bar",
                 "Ice Cream",
-                "Jerry"
+                "Jimmies"
             };
             previousTitle = new string[] {
                 "Astrophysics",
@@ -132,7 +132,7 @@ namespace GC_Lab_3._1
                 invalidInput = !int.TryParse(rawUserInput, out selection);
                 if (selection > menuLength || selection < 1)
                 {
-                    Console.WriteLine("<Error: Invalid Choice>");
+                    writeRed("<Error: Invalid Choice>");
                     invalidInput = true;
                 }
             }
@@ -140,5 +140,12 @@ namespace GC_Lab_3._1
             return selection - 1;
         }
 
+        private static void writeRed(string s)
+        {
+            var defaultColor = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(s);
+            Console.ForegroundColor = defaultColor;
+        }
     }
 }

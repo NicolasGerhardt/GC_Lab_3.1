@@ -90,7 +90,7 @@ namespace GC_Lab_3._1
                 "Elephant Ears",
                 "Fudge",
                 "Gray Stuff",
-                "Harp Bar",
+                "Heath Bar",
                 "Ice Cream",
                 "Jimmies"
             };

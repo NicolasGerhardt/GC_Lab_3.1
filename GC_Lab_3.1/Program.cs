@@ -87,7 +87,7 @@ namespace GC_Lab_3._1
                 "Banana",
                 "Chocolate",
                 "DumDums",
-                "Elephan Ears",
+                "Elephant Ears",
                 "Fudge",
                 "Gray Stuff",
                 "Harp Bar",

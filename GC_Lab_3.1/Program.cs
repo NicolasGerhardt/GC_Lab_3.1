@@ -13,11 +13,11 @@ namespace GC_Lab_3._1
             do
             {
                 string[] students;
-                string[] favoriteFoods;
+                string[] favoriteCandy;
                 string[] previousTitle;
                 var foodOrTitle = new string[] { "Favorite Food", "Previous Title" };
 
-                initalizeArrays(out students, out favoriteFoods, out previousTitle);
+                initalizeArrays(out students, out favoriteCandy, out previousTitle);
 
                 Console.WriteLine("Here is our list of students:");
                 createMenuwithArray(students);
@@ -30,7 +30,7 @@ namespace GC_Lab_3._1
                 switch (foodOrTitleSelection)
                 {
                     case 0:
-                        Console.WriteLine($"{students[selection]} favorite food is {favoriteFoods[selection]}");
+                        Console.WriteLine($"{students[selection]} favorite food is {favoriteCandy[selection]}");
                         break;
                     case 1:
                         Console.WriteLine($"{students[selection]} previous title was {previousTitle[selection]}");
@@ -68,28 +68,43 @@ namespace GC_Lab_3._1
         }
 
 
-        private static void initalizeArrays(out string[] students, out string[] favoriteFoods, out string[] previousTitle)
+        private static void initalizeArrays(out string[] students, out string[] candy, out string[] previousTitle)
         {
             students = new string[] { 
                 "Alex",
                 "Brian",
                 "Charlie",
                 "David",
-                "Elana"
+                "Elana",
+                "Frank",
+                "Greg",
+                "Hanna",
+                "Ilean",
+                "Jerry"
             };
-            favoriteFoods = new string[] {
-                "Pizza",
-                "Burgers",
-                "Rice",
-                "Money Brains",
-                "Stuffed Cabbage"
+            candy = new string[] {
+                "Almond Joy",
+                "Banana",
+                "Chocolate",
+                "DumDums",
+                "Elephan Ears",
+                "Fudge",
+                "Gray Stuff",
+                "Harp Bar",
+                "Ice Cream",
+                "Jerry"
             };
             previousTitle = new string[] {
-                "Lawn Mower",
-                "Dish Washer",
-                "Cloths Cleaner",
-                "Window Washer",
-                "Dance Instructor"
+                "Astrophysics",
+                "Board Room Designer",
+                "Carnaval Owner",
+                "Duck",
+                "Elephant Ear Maker",
+                "Funk Dance Instructor",
+                "Gilette Sales Rep",
+                "Handicap Advocate",
+                "Intellegance Officer",
+                "International Pipe Layer"
             };
 
         }
